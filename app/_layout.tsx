@@ -1,18 +1,28 @@
-import FontAwesome from '@expo/vector-icons/FontAwesome';
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
-import { SplashScreen, Stack } from 'expo-router';
-import { useEffect } from 'react';
-import { useColorScheme } from 'react-native';
+import FontAwesome from "@expo/vector-icons/FontAwesome";
+import {
+  DarkTheme,
+  DefaultTheme,
+  ThemeProvider,
+} from "@react-navigation/native";
+import { useFonts } from "expo-font";
+import { SplashScreen, Stack, useNavigation } from "expo-router";
+import { useEffect } from "react";
+// import { useColorScheme } from "react-native";
+import CustomHeader from "../components/Header/CustomHeader";
+import { BottomSheetModalProvider } from "@gorhom/bottom-sheet";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
+import Colors from "../constants/Colors";
+import { TouchableOpacity } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 
 export {
   // Catch any errors thrown by the Layout component.
   ErrorBoundary,
-} from 'expo-router';
+} from "expo-router";
 
 export const unstable_settings = {
   // Ensure that reloading on `/modal` keeps a back button present.
-  initialRouteName: '(tabs)',
+  initialRouteName: "(tabs)",
 };
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
@@ -20,7 +30,7 @@ SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
   const [loaded, error] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
+    SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
     ...FontAwesome.font,
   });
 
@@ -43,14 +53,44 @@ export default function RootLayout() {
 }
 
 function RootLayoutNav() {
-  const colorScheme = useColorScheme();
-
+  const navigation = useNavigation();
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
-      </Stack>
-    </ThemeProvider>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <BottomSheetModalProvider>
+        <Stack>
+          <Stack.Screen
+            name="index"
+            options={{
+              header: () => <CustomHeader />,
+            }}
+          />
+          <Stack.Screen
+            name="(modal)/filter"
+            options={{
+              presentation: "modal",
+              headerTitle: "Filter",
+              headerTintColor: Colors.soft_orange,
+              headerShadowVisible: false,
+              headerStyle: {
+                backgroundColor: Colors.grey_lime,
+              },
+              headerLeft: () => (
+                <TouchableOpacity
+                  onPress={() => {
+                    navigation.goBack();
+                  }}
+                >
+                  <Ionicons
+                    name="close-outline"
+                    size={28}
+                    color={Colors.soft_orange}
+                  />
+                </TouchableOpacity>
+              ),
+            }}
+          />
+        </Stack>
+      </BottomSheetModalProvider>
+    </GestureHandlerRootView>
   );
 }
