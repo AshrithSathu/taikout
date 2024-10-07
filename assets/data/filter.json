@@ -1,74 +1,78 @@
 [
-    {
-        "name": "Acai",
-        "count": 7
-    },
-    {
-        "name": "African",
-        "count": 9
-    },
-    {
-        "name": "Alcohol",
-        "count": 330
-    },
-    {
-        "name": "American",
-        "count": 201
-    },
-    {
-        "name": "BBQ",
-        "count": 73
-    },
-    {
-        "name": "Brunch",
-        "count": 118
-    },
-    {
-        "name": "Cakes",
-        "count": 36
-    },
-    {
-        "name": "Dessert",
-        "count": 282
-    },
-    {
-        "name": "Falafel",
-        "count": 30
-    },
-    {
-        "name": "German",
-        "count": 5
-    },
-    {
-        "name": "Healthy",
-        "count": 247
-    },
-    {
-        "name": "Indian",
-        "count": 112
-    },
-    {
-        "name": "Meal Deal",
-        "count": 129
-    },
-    {
-        "name": "Pancakes",
-        "count": 15
-    },
-    {
-        "name": "Pizza",
-        "count": 208
-    },
-    {
-        "name": "Soup",
-        "count": 8
-    },
-    {
-        "name": "Takeaways",
-        "count": 87
-    },
-    {
-        "name": "Wraps",
-        "count": 99
-    }
+  {
+    "name": "North Indian",
+    "count": 150
+  },
+  {
+    "name": "South Indian",
+    "count": 130
+  },
+  {
+    "name": "Chinese",
+    "count": 90
+  },
+  {
+    "name": "Mughlai",
+    "count": 85
+  },
+  {
+    "name": "Biryani",
+    "count": 180
+  },
+  {
+    "name": "Street Food",
+    "count": 140
+  },
+  {
+    "name": "Bakery",
+    "count": 60
+  },
+  {
+    "name": "Desserts",
+    "count": 190
+  },
+  {
+    "name": "Fast Food",
+    "count": 210
+  },
+  {
+    "name": "Healthy Food",
+    "count": 100
+  },
+  {
+    "name": "Pizza",
+    "count": 200
+  },
+  {
+    "name": "Beverages",
+    "count": 175
+  },
+  {
+    "name": "Seafood",
+    "count": 40
+  },
+  {
+    "name": "Kebabs",
+    "count": 60
+  },
+  {
+    "name": "Rolls & Wraps",
+    "count": 110
+  },
+  {
+    "name": "Thalis",
+    "count": 70
+  },
+  {
+    "name": "Ice Cream",
+    "count": 50
+  },
+  {
+    "name": "Juices",
+    "count": 90
+  },
+  {
+    "name": "Paan",
+    "count": 25
+  }
 ]

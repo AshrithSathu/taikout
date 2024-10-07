@@ -1,12 +1,7 @@
 import React, { useRef } from "react";
-import {
-  SafeAreaView,
-  StyleSheet,
-  TouchableOpacity,
-  View,
-  Text,
-  Image,
-} from "react-native";
+import { Platform, StatusBar } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { StyleSheet, TouchableOpacity, View, Text, Image } from "react-native";
 import {
   BottomSheetModalProvider,
   BottomSheetModal,
@@ -39,12 +34,14 @@ export default CustomHeader;
 
 const styles = StyleSheet.create({
   safeArea: {
-    // flex: 1,
+    flex: 1,
     backgroundColor: Colors.grey_lime,
+    paddingTop:
+      Platform.OS === "android" ? (StatusBar.currentHeight || 0) + 13 : 0,
   },
   container: {
     gap: 6,
-    height: 100,
+    height: 110,
     backgroundColor: Colors.grey_lime,
   },
   bike: {

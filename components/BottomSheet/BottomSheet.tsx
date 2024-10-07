@@ -51,13 +51,13 @@ const BottomSheet = forwardRef<Ref>((props, ref) => {
               <Ionicons
                 name="location-outline"
                 size={20}
-                color={Colors.lavender_blush}
+                color={Colors.grey_lime}
               />
 
               <Text
                 style={{
                   flex: 1,
-                  color: Colors.lavender_blush,
+                  color: Colors.grey_lime,
                   fontWeight: "bold",
                   fontSize: 14,
                 }}
@@ -67,7 +67,7 @@ const BottomSheet = forwardRef<Ref>((props, ref) => {
               <Ionicons
                 name="chevron-forward"
                 size={20}
-                color={Colors.lavender_blush}
+                color={Colors.grey_lime}
               />
             </View>
           </TouchableOpacity>
@@ -79,13 +79,13 @@ const BottomSheet = forwardRef<Ref>((props, ref) => {
             <Ionicons
               name="stopwatch-outline"
               size={20}
-              color={Colors.lavender_blush}
+              color={Colors.grey_lime}
             />
 
             <Text
               style={{
                 flex: 1,
-                color: Colors.lavender_blush,
+                color: Colors.grey_lime,
                 fontWeight: "bold",
                 fontSize: 14,
               }}
@@ -95,7 +95,7 @@ const BottomSheet = forwardRef<Ref>((props, ref) => {
             <Ionicons
               name="chevron-forward"
               size={20}
-              color={Colors.lavender_blush}
+              color={Colors.grey_lime}
             />
           </View>
         </TouchableOpacity>
@@ -115,10 +115,10 @@ const styles = StyleSheet.create({
   },
   contentContainer: {
     flex: 1,
-    // padding: 20,
+    padding: 10,
   },
   button: {
-    backgroundColor: Colors.grey,
+    backgroundColor: Colors.grey_lime,
     padding: 10,
     borderRadius: 10,
     marginTop: 30,
@@ -149,7 +149,10 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   item: {
-    backgroundColor: Colors.grey,
+    // backgroundColor: Colors.grey_lime,
+    borderColor: Colors.grey_lime,
+    borderWidth: 1,
+    borderRadius: 10,
     flexDirection: "row",
     gap: 10,
     alignItems: "center",

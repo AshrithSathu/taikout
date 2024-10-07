@@ -9,14 +9,15 @@ const TopHeader = ({ openModal }: { openModal: () => void }) => {
     <View style={styles.imageContainer}>
       <BottomSheetModalProvider>
         <TouchableOpacity onPress={openModal}>
-          <Image
+          {/* <Image
             source={require("../../assets/images/bike.png")}
             style={styles.bike}
-          />
+          /> */}
+          <Ionicons name="location" size={30} color={Colors.soft_orange} />
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.titleContainer} onPress={openModal}>
-          <Text style={styles.titleText}>TaikOut</Text>
+          <Text style={styles.titleText}>Manipal</Text>
           <View style={{ flexDirection: "row", alignItems: "center" }}>
             <Text style={styles.subTitle}>Select Location</Text>
             <Ionicons
@@ -46,12 +47,12 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   titleText: {
-    fontSize: 14,
+    fontSize: 20,
     fontWeight: "600",
     color: Colors.soft_orange,
   },
   subTitle: {
-    fontSize: 14,
+    fontSize: 13,
     fontWeight: "bold",
     color: Colors.soft_orange,
   },
@@ -59,7 +60,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    gap: 15,
+    gap: 5,
     paddingHorizontal: 20,
   },
   profileButton: {

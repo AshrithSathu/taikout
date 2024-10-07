@@ -45,6 +45,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 20,
     alignItems: "center",
+    marginBottom: 10,
   },
   searchField: {
     flex: 1,

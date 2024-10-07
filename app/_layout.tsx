@@ -14,6 +14,7 @@ import { GestureHandlerRootView } from "react-native-gesture-handler";
 import Colors from "../constants/Colors";
 import { TouchableOpacity } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -61,7 +62,11 @@ function RootLayoutNav() {
           <Stack.Screen
             name="index"
             options={{
-              header: () => <CustomHeader />,
+              header: () => (
+                <SafeAreaProvider>
+                  <CustomHeader />
+                </SafeAreaProvider>
+              ),
             }}
           />
           <Stack.Screen
